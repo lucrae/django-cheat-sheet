@@ -1,17 +1,15 @@
-# Django Cheat-sheet
-A concise cheat-sheet for creating web apps with the Django framework using Python.
+# :scroll: Django Cheat Sheet
+A concise cheat-sheet for creating web apps with the Django framework using the Python language. For the full documentation for Django v2.0 go to https://docs.djangoproject.com/en/2.0/.
 
-Django v2.0 documentation: https://docs.djangoproject.com/en/2.0/
-
-## Initializing pipenv (optional)
-- Navigate to project folder with `$ cd <project_folder>`
+## :snake: Initializing pipenv (optional)
+- Make main folder with `$ mkdir <folder>` and navigate with `$ cd <folder>`
 - Initialize pipenv with `$ pipenv install`
 - To specify the python version `$ pipenv --python 3.6`
 - Enter pipenv shell with `$ pipenv shell`
 - Install django with `$ pipenv install django`
 - Install other package dependencies with `$ pipenv install <package_name>`
 
-## Creating a project
+## :blue_book: Creating a project
 - Navigate to main folder with `$ cd <project_folder>`
 - Create project with `$ django-admin startproject <project_name>`
 
@@ -27,7 +25,7 @@ project/
 ```
 - Run the development server with `$ python manage.py runserver`
 
-## Creating an app
+## :page_with_curl: Creating an app
 - Navigate to the project folder with  `$ cd <project_folder>`
 - Create app with  `$ python manage.py startapp <app_name>`
 - Inside the `app` folder, create a file called `urls.py`
