@@ -1,5 +1,5 @@
 # Django Cheat-sheet
-A concise cheat-sheet for creating web apps with the Django framework.
+A concise cheat-sheet for creating web apps with the Django framework using Python.
 
 Django v2.0 documentation: https://docs.djangoproject.com/en/2.0/
 
