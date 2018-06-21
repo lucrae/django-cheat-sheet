@@ -2,11 +2,12 @@
 # :scroll: Django Cheat Sheet
 A concise cheat-sheet for creating web apps with the Django framework using the Python language. For the full documentation for Django v2.0 go to https://docs.djangoproject.com/en/2.0/.
 
-[:snake: Initializing pipenv (optional)](#snake-initializing-pipenv-optional)
-[:blue_book: Creating a project](#blue_book-creating-a-project)
-[:page_with_curl: Creating an app](#page_with_curl-creating-an-app)
-[:tv: Creating a view](#tv-creating-a-view)
-[:art: Templates](#art-templates)
+Sections:
+- [:snake: Initializing pipenv (optional)](#snake-initializing-pipenv-optional)
+- [:blue_book: Creating a project](#blue_book-creating-a-project)
+- [:page_with_curl: Creating an app](#page_with_curl-creating-an-app)
+- [:tv: Creating a view](#tv-creating-a-view)
+- [:art: Templates](#art-templates)
 
 
 ## :snake: Initializing pipenv (optional)
