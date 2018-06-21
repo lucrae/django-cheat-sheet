@@ -26,7 +26,7 @@ project/
 - Run the development server with `$ python manage.py runserver` within the project directory
 - To secure the secret key, open `settings.py` from the project directory
 - Within this file, change the SECRET_KEY line to the following:
-```
+```python
 SECRET_KEY = os.environ.get('SECRET_KEY')
 ```
 - This defines the SECRET_KEY from an envrionment variable, set this with `$ export SECRET_KEY=<secret_key>`
@@ -40,19 +40,20 @@ The project directory should now look like this:
 ```
 project/
     manage.py
+    db.sqlite3
     project/
         __init__.py
         settings.py
         urls.py
         wsgi.py
-	app/
+    app/
+        migrations/
 	    __init__.py
-	    admin.py
-	    apps.py
-	    migrations/
-	        __init__.py
-	    models.py
-	    tests.py
-	    urls.py
-	    views.py
+	__init__.py
+	admin.py
+        apps.py
+	models.py
+	tests.py
+	urls.py
+	views.py
 ```
