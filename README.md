@@ -1,5 +1,7 @@
 # Django Cheat-sheet
-A concise cheat-sheet for creating web apps with the Django framework. Django v2.0 documentation: https://docs.djangoproject.com/en/2.0/
+A concise cheat-sheet for creating web apps with the Django framework.
+
+Django v2.0 documentation: https://docs.djangoproject.com/en/2.0/
 
 ## Initializing pipenv (optional)
 1. Navigate to project folder with `$ cd <project_folder>`
