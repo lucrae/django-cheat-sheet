@@ -100,11 +100,11 @@ urlpatterns = [
 - Within the app directory, files are located within the following locations:
 ```
 app/
-	templates/
-		index.html
-	static/
-		style.css
-		script.js
+   templates/
+      index.html
+   static/
+      style.css
+      script.js
 ```
 - To add a template to views, open `views.py` within the app directory and include the following:
 ```python
