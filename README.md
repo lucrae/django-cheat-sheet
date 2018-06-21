@@ -4,11 +4,12 @@ A concise cheat-sheet for creating web apps with the Django framework using Pyth
 Django v2.0 documentation: https://docs.djangoproject.com/en/2.0/
 
 ## Initializing pipenv (optional)
-1. Navigate to project folder with `$ cd <project_folder>`
-2. Initialize pipenv with `$ pipenv install`
-3. Enter pipenv shell with `$ pipenv shell`
-4. Install django with `$ pipenv install django`
-5. Install other package dependencies with `$ pipenv install <package_name>`
+- Navigate to project folder with `$ cd <project_folder>`
+- Initialize pipenv with `$ pipenv install`
+- To specify the python version `$ pipenv --python 3.6`
+- Enter pipenv shell with `$ pipenv shell`
+- Install django with `$ pipenv install django`
+- Install other package dependencies with `$ pipenv install <package_name>`
 
 ## Creating a project
 - Navigate to main folder with `$ cd <project_folder>`
