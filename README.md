@@ -34,12 +34,12 @@ project/
         wsgi.py
 ```
 - Run the development server with `$ python manage.py runserver` within the project directory
-- To secure the secret key using an environment variable, open `settings.py` from the project directory
-- Within this file, change the SECRET_KEY line to the following:
+- If you want your `SECRET_KEY` to be more secure, you can set it to reference an environment variable
+- In the `settings.py` file within the project directory change the `SECRET_KEY` line to the following:
 ```python
 SECRET_KEY = os.environ.get('SECRET_KEY')
 ```
-- This defines the SECRET_KEY from an environment variable, set this with `export SECRET_KEY=<secret_key>` within your `~/.bash_profile`
+- You can set this environment variable in your shell with `export SECRET_KEY=<secret_key>`
 
 ## :page_with_curl: Creating an app
 - Navigate to the project folder with  `$ cd <project_folder>`
