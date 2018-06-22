@@ -1,3 +1,4 @@
+
 # :scroll: Django Cheat Sheet
 A cheat-sheet for creating web apps with the Django framework using the Python language. Most of the summaries and examples are based off [the official documentation](https://docs.djangoproject.com/en/2.0/) for Django v2.0.
 
@@ -180,17 +181,17 @@ class Pizza(models.Model):
     # ...
     toppings = models.ManyToManyField(Topping)
 ```
-*Note that the* `ManyToManyField` *is **only defined in one model**. It doesn't matter which model has the field, but if in doubt, it should be in the model that will be interacted with in a form.*
+*Note that the `ManyToManyField`  is **only defined in one model**. It doesn't matter which model has the field, but if in doubt, it should be in the model that will be interacted with in a form.*
 
 - Although Django provides a `OneToOneField` relation, a one-to-one relationship can also be defined by adding the kwarg of `unique = True` to a model's `ForeignKey`:
 ```python
 ForeignKey(SomeModel, unique=True)
 ```
 	
-- For more detail and examples, the [official documentation for models]( https://docs.djangoproject.com/en/2.0/topics/db/models/) provides a lot of useful information.
+- For more detail, the [official documentation for database models]( https://docs.djangoproject.com/en/2.0/topics/db/models/) provides a lot of useful information and examples.
 
 ## :postbox: Creating model objects and queries
-- The following examples are based off the following example `models.py`:
+- Example `models.py` file:
 ```python
 from django.db import models
 
