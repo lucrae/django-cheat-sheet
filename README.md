@@ -180,7 +180,7 @@ class Pizza(models.Model):
     # ...
     toppings = models.ManyToManyField(Topping)
 ```
-*Note that the `ManyToManyField`  is **only defined in one model**. It doesn't matter which model has the field, but if in doubt, it should be in the model that will be interacted with in a form.*
+*Note that the* `ManyToManyField` *is **only defined in one model**. It doesn't matter which model has the field, but if in doubt, it should be in the model that will be interacted with in a form.*
 
 - Although Django provides a `OneToOneField` relation, a one-to-one relationship can also be defined by adding the kwarg of `unique = True` to a model's `ForeignKey`:
 ```python
