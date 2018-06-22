@@ -1,7 +1,7 @@
 
 
 # :scroll: Django Cheat Sheet
-A concise cheat-sheet for creating web apps with the Django framework using the Python language. For the full documentation for Django v2.0 go to https://docs.djangoproject.com/en/2.0/.
+A cheat-sheet for creating web apps with the Django framework using the Python language. Most of the summaries and examples are based off [the official documentation](https://docs.djangoproject.com/en/2.0/) for Django v2.0.
 
 ## Sections
 - :snake: [Initializing pipenv](#snake-initializing-pipenv-optional) (optional)
@@ -189,7 +189,7 @@ class Pizza(models.Model):
 ForeignKey(SomeModel, unique=True)
 ```
 	
-- For more detail and examples, the official documentation provides a lot of useful information: https://docs.djangoproject.com/en/2.0/topics/db/models/
+- For more detail and examples, the [official documentation for models]( https://docs.djangoproject.com/en/2.0/topics/db/models/) provides a lot of useful information.
 
 ## :postbox: Creating model objects and queries
 - The following examples are based off the following example `models.py`:
