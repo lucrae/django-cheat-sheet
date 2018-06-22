@@ -1,5 +1,3 @@
-
-
 # :scroll: Django Cheat Sheet
 A cheat-sheet for creating web apps with the Django framework using the Python language. Most of the summaries and examples are based off [the official documentation](https://docs.djangoproject.com/en/2.0/) for Django v2.0.
 
@@ -36,12 +34,12 @@ project/
         wsgi.py
 ```
 - Run the development server with `$ python manage.py runserver` within the project directory
-- To secure the secret key, open `settings.py` from the project directory
+- To secure the secret key using an environment variable, open `settings.py` from the project directory
 - Within this file, change the SECRET_KEY line to the following:
 ```python
 SECRET_KEY = os.environ.get('SECRET_KEY')
 ```
-- This defines the SECRET_KEY from an envrionment variable, set this with `$ export SECRET_KEY=<secret_key>`
+- This defines the SECRET_KEY from an environment variable, set this with `export SECRET_KEY=<secret_key>` within your `~/.bash_profile`
 
 ## :page_with_curl: Creating an app
 - Navigate to the project folder with  `$ cd <project_folder>`
