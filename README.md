@@ -1,4 +1,3 @@
-
 # :scroll: Django Cheat Sheet
 A cheat-sheet for creating web apps with the Django framework using the Python language. Most of the summaries and examples are based off [the official documentation](https://docs.djangoproject.com/en/2.0/) for Django v2.0.
 
@@ -39,10 +38,15 @@ project/
 ```python
 SECRET_KEY = os.environ.get('SECRET_KEY')
 ```
+- To quickly generate a random hex for your secret key:
+```python
+>>> import secrets
+>>> secrets.token_hex()
+```
 - You can set this environment variable in your shell with `export SECRET_KEY=<secret_key>`
 
 ## :page_with_curl: Creating an app
-- Navigate to the project folder with  `$ cd <project_folder>`
+- Navigate to the outer project folder  `$ cd <outer_project_folder>`
 - Create app with  `$ python manage.py startapp <app_name>`
 - Inside the `app` folder, create a file called `urls.py`
 
@@ -67,6 +71,13 @@ project/
         urls.py
         views.py
 ```
+- To include this app in your project, add your app to the project's `settings.py` file by adding its name to the `INSTALLED_APPS` list:
+```python
+INSTALLED_APPS = [
+	'app',
+	# ...
+]
+```
 
 ## :tv: Creating a view
 - Within the app directory, open `views.py` and add the following:
@@ -79,7 +90,6 @@ def index(request):
 - Still within the app directory, open (or create)  `urls.py` 
 ```python
 from django.urls import path
-
 from . import views
 
 urlpatterns = [
@@ -120,14 +130,52 @@ app/
 from django.shortcuts import render
 
 def index(request):
-    return render(request,'template_name.html')
+    return render(request,'index.html')
 ```
 - To include context to the template:
 ```python
 def index(request):
 	context = {"context_variable": context_variable}
-    return render(request,'template_name.html', context)
+    return render(request,'index.html', context)
 ```
+- Within the HTML file, you can reference static files by adding the following:
+```html
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="{% static 'styles.css' %}">
+	</head>
+</html>
+```
+- To make sure to include the following in your `settings,py`:
+```python
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+	os.path.join(BASE_DIR, "static")
+]
+```
+- To add an `extends`:
+```html
+{% extends 'base.html'% }
+
+{% block content %}
+
+Hello, World!
+
+{% endblock %}
+```
+- And then in `base.html` add:
+```html
+<body>
+	{% block content %}{% endblock %}
+</body>
+```
+
 ## :ticket: Creating a model
 - Within the app's `models.py` file, an example of a simple model can be added with the following:
 ```python
@@ -138,14 +186,8 @@ class Person(models.Model):
 	last_name = models.CharField(max_length=30)
 ```
 *Note that you don't need to create a primary key, Django automatically adds an IntegerField.*
-- For the project to use these models, make sure to add your app to the project's `settings.py` file by adding it to the `INSTALLED_APPS` list
-```python
-INSTALLED_APPS = [
-	'app',
-	# ...
-]
-```
-- To inact this change, use the following commands in the command-line:
+
+- To inact changes in your models, use the following commands in your shell:
 ```
 $ manage.py makemigrations <app_name>
 $ manage.py migrate
