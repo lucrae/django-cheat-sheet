@@ -9,6 +9,7 @@ A cheat-sheet for creating web apps with the Django framework using the Python l
 - :art: [Creating a template](#art-creating-a-template)
 - :ticket: [Creating a model](#ticket-creating-a-model)
 - :postbox: [Creating model objects and queries](#postbox-creating-model-objects-and-queries)
+- :man: [Using the Admin page](#man-using-the-admin-page)
 
 
 ## :snake: Initializing pipenv (optional)
@@ -77,6 +78,10 @@ INSTALLED_APPS = [
 	'app',
 	# ...
 ]
+```
+- To migrate changes over:
+```bash
+$ manage.py migrate
 ```
 
 ## :tv: Creating a view
@@ -283,4 +288,18 @@ $ python manage.py shell
 >>> all_entries = Entry.objects.all()
 >>> indexed_entry = Entry.objects.get(pk=1)
 >>> find_entry = Entry.objects.filter(name='Beatles Blog')
+```
+
+## :man: Using the Admin page
+- To create a `superuser`:
+```bash
+$ python manage.py createsuperuser
+```
+- To add a model to the Admin page include the following in `admin.py`:
+```python
+from django.contrib import admin
+from .models import Author, Book
+
+admin.site.register(Author)
+admin.site.register(Book)
 ```
