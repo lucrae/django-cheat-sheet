@@ -10,7 +10,6 @@ A cheat-sheet for creating web apps with the Django framework using the Python l
 - :ticket: [Creating a model](#ticket-creating-a-model)
 - :postbox: [Creating model objects and queries](#postbox-creating-model-objects-and-queries)
 - :man: [Using the Admin page](#man-using-the-admin-page)
-- :minidisc: [Changing the backend database](#minidisc-changing-the-backend-database)
 
 
 ## :snake: Initializing pipenv (optional)
@@ -304,15 +303,3 @@ from .models import Author, Book
 admin.site.register(Author)
 admin.site.register(Book)
 ```
-## :minidisc: Changing the backend database
-- By default, Django uses a `SQLite` as its backend database; in `settings.py`:
-```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-```
-- Although `SQLite` is often fine for light development use, we can change our backend database to `MySQL`, `Oracle` or `PostgreSQL`, which are more suitable for production servers that would benefit from a more full-featured DBMS.
-- https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
