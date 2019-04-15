@@ -81,7 +81,7 @@ INSTALLED_APPS = [
 ```
 - To migrate changes over:
 ```bash
-$ manage.py migrate
+$ python manage.py migrate
 ```
 
 ## :tv: Creating a view
@@ -194,8 +194,8 @@ class Person(models.Model):
 
 - To inact changes in your models, use the following commands in your shell:
 ```
-$ manage.py makemigrations <app_name>
-$ manage.py migrate
+$ python manage.py makemigrations <app_name>
+$ python manage.py migrate
 ```
 *Note: including <app_name> is optional.*
 - A one-to-many relationship can be made with a `ForeignKey`:
