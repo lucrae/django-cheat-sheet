@@ -166,7 +166,7 @@ STATICFILES_DIRS = [
 ```
 - To add an `extends`:
 ```html
-{% extends 'base.html'% }
+{% extends 'base.html'%}
 
 {% block content %}
 
