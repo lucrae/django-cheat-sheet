@@ -1,5 +1,5 @@
 # :scroll: Django Cheat Sheet
-A cheat-sheet for creating web apps with the Django framework using the Python language. Most of the summaries and examples are based off [the official documentation](https://docs.djangoproject.com/en/2.0/) for Django v2.0.
+A cheat-sheet for creating web apps with the Django framework using the Python language. Most of the summaries and examples are based on [the official documentation](https://docs.djangoproject.com/en/2.0/) for Django v2.0.
 
 ## Sections
 - :snake: [Initializing pipenv](#snake-initializing-pipenv-optional) (optional)
@@ -192,7 +192,7 @@ class Person(models.Model):
 ```
 *Note that you don't need to create a primary key, Django automatically adds an IntegerField.*
 
-- To inact changes in your models, use the following commands in your shell:
+- To perform changes in your models, use the following commands in your shell:
 ```
 $ python manage.py makemigrations <app_name>
 $ python manage.py migrate
