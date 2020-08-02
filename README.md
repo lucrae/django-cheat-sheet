@@ -75,7 +75,7 @@ project/
 - To include this app in your project, add your app to the project's `settings.py` file by adding its name to the `INSTALLED_APPS` list:
 ```python
 INSTALLED_APPS = [
-	'app',
+	'app.apps.AppConfig',
 	# ...
 ]
 ```
