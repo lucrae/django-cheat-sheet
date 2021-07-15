@@ -1,5 +1,5 @@
 # :scroll: Django Cheat Sheet
-A cheat-sheet for creating web apps with the Django framework using the Python language. Most of the summaries and examples are based on [the official documentation](https://docs.djangoproject.com/en/2.0/) for Django v2.0.
+A cheat-sheet for creating web apps with the Django framework using the Python language. Most of the summaries and examples are based on [the official documentation](https://docs.djangoproject.com/en/2.0/) for Django v3.2.
 
 ## Sections
 - :snake: [Initializing pipenv](#snake-initializing-pipenv-optional) (optional)
@@ -161,7 +161,7 @@ def index(request):
 ```python
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-	os.path.join(BASE_DIR, "static")
+	BASE_DIR / "static"
 ]
 ```
 - To add an `extends`:
