@@ -157,7 +157,7 @@ def index(request):
 	</head>
 </html>
 ```
-- To make sure to include the following in your `settings,py`:
+- To make sure to include the following in your `settings.py`:
 ```python
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
