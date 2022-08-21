@@ -10,7 +10,7 @@ A cheat-sheet for creating web apps with the Django framework using the Python l
 - :ticket: [Creating a model](#ticket-creating-a-model)
 - :postbox: [Creating model objects and queries](#postbox-creating-model-objects-and-queries)
 - :man: [Using the Admin page](#man-using-the-admin-page)
-
+- :leaves: [Use MongoDB](#leaves-use-mongodb-optional) (optional)
 
 ## :snake: Initializing pipenv (optional)
 - Make main folder with `$ mkdir <folder>` and navigate to it with `$ cd <folder>`
@@ -302,4 +302,23 @@ from .models import Author, Book
 
 admin.site.register(Author)
 admin.site.register(Book)
+```
+## :leaves: Use MongoDB (optional)
+- installing djongo lib
+```bash
+$ pip install djongo
+```
+- Change these settings in the **settings.py** file on your project
+```python
+
+DATABASES = {
+   'default': {
+      'ENGINE' : 'djongo',
+      
+       'NAME' : 'db_name',
+        'CLIENT': {
+            'host': 'mongodb://localhost:27017',
+        }
+   }
+}
 ```
